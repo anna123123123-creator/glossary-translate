@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>术语表批量替换 · Glossary Replacer</title>
+<meta name="description" content="免费开源、纯浏览器运行的术语表批量替换工具，用于翻译/文档场景下统一术语用词，替换处高亮显示，可导出结果。不联网、不上传。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>术语表<span class="accent">批量替换</span></h1>
+    <p class="tagline">配置一份术语对照表，粘贴文档，一键把术语统一替换成指定译法，替换处会高亮显示。翻译/文档校对场景常用。</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-glossary">
+      <div class="panel-head">
+        <span>术语表</span>
+        <div class="btns">
+          <button id="btnExample" class="btn btn-ghost">加载示例</button>
+        </div>
+      </div>
+      <textarea id="glossaryInput" spellcheck="false" placeholder="原文术语 | 替换成
+用户 | 客户
+登录 | 登入
+确定 | 確認"></textarea>
+      <p class="hint">每行一条，用竖线 | 分隔"原词"和"替换成"。</p>
+    </section>
+
+    <section class="panel panel-doc">
+      <div class="panel-head">
+        <span>文档</span>
+        <div class="btns">
+          <button id="btnRun" class="btn btn-primary">应用替换 →</button>
+          <button id="btnExport" class="btn btn-ghost">导出结果</button>
+        </div>
+      </div>
+      <textarea id="docInput" spellcheck="false" placeholder="把要处理的文档粘贴到这里……"></textarea>
+    </section>
+
+    <section class="panel panel-result">
+      <div class="panel-head"><span>替换结果（高亮 = 被替换处）</span></div>
+      <div id="resultView" class="result-view"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MIT 协议开源，纯前端字符串替换，不联网、不上传文档。</p>
+    <p>想要真正的 AI 实时翻译、文档翻译、网页翻译，支持 100+ 语种？<a href="https://inzyxuashop.com/aifanyi-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 翻译源码 →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
